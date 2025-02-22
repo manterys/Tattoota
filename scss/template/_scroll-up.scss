@@ -1,0 +1,31 @@
+.scroll-up {
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background: $color-yellow;
+  z-index: 19;
+  transition: $transition03;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .scroll {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    @include flexCenter(row);
+
+    .fas {
+      color: $color-black;
+      font-size: 1.2rem;
+    }
+    &:hover {
+      background: darken($color-yellow, 20);
+    }
+  }
+}

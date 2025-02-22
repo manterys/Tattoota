@@ -1,0 +1,19 @@
+@keyframes home-image {
+  from {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

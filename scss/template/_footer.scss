@@ -1,0 +1,48 @@
+.footer-container {
+  min-height: 100vh;
+  width: 100%;
+  @include flexCenter(row);
+
+  .footer-content {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    @include flexCenter(column);
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-social {
+    .fab {
+      cursor: pointer;
+      font-size: 2rem;
+      margin: 0 1rem;
+      @include mediaMd {
+        font-size: 1.5rem;
+      }
+      &.fa-facebook-f:hover {
+        color: #3b5999;
+      }
+      &.fa-instagram:hover {
+        color: #e4405f;
+      }
+      &.fa-twitter:hover {
+        color: #55acee;
+      }
+    }
+  }
+}
+
+// main footer
+.footer {
+  position: sticky;
+  bottom: 0px;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  @include flexCenter(row);
+  background: $color-black;
+}

@@ -1,0 +1,154 @@
+// Header
+.nav a {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  &.active,
+  &:hover {
+    color: $color-yellow;
+  }
+}
+.logo {
+  font-family: "Teko", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: $color-white;
+}
+
+// Home
+.home-content {
+  .logo {
+    font-size: 4rem;
+    font-size: clamp(4rem, 11vw, 7rem);
+  }
+  h1 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    transform: translateX(3px);
+  }
+  .fab {
+    font-size: 1.2rem;
+    margin: 2rem 0.7rem;
+    &.fa-facebook-f:hover {
+      color: #3b5999;
+    }
+    &.fa-instagram:hover {
+      color: #e4405f;
+    }
+    &.fa-twitter:hover {
+      color: #55acee;
+    }
+    &.fa-behance:hover {
+      color: grey;
+    }
+  }
+}
+
+// About
+.about-content {
+  p {
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    @include mediaMd {
+      font-size: 1.3rem;
+    }
+    &:nth-child(1) {
+      &::first-letter {
+        color: $color-yellow;
+        font-size: 1.3rem;
+        @include mediaMd {
+          font-size: 2rem;
+        }
+      }
+    }
+    &:nth-child(2) {
+      color: $color-white;
+      line-height: 1;
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+  }
+  .logo {
+    font-size: 3.5rem;
+  }
+  li {
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    line-height: 1.9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 0.4rem;
+    padding-left: 12px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 0;
+      height: 5px;
+      width: 5px;
+      background: $color-yellow;
+    }
+  }
+}
+
+// Footer contact
+.footer-content {
+  .footer-info {
+    span,
+    a {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+
+      &:nth-child(5) {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 4;
+
+        @include mediaMd {
+          line-height: 2;
+          font-size: 2.5rem;
+        }
+      }
+    }
+    a {
+      font-weight: 700;
+
+      @include mediaMd {
+        font-size: 3rem;
+      }
+    }
+  }
+  .logo a {
+    font-size: 4rem;
+    line-height: 2;
+
+    @include mediaMd {
+      font-size: 7rem;
+      line-height: 2;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+// Footer
+.footer span {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  a {
+    font-weight: 800;
+    color: $color-red;
+  }
+}

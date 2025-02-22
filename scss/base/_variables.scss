@@ -1,0 +1,39 @@
+$color-black: #0a0a0a;
+$color-white: #f3f3f3;
+$color-red: #e1373d;
+$color-yellow: #ec9837;
+$color-green: #1a864e;
+
+$color-nav-side: $color-black;
+$color-dark-theme: $color-black;
+
+$home-image: url(../img/home-image.jpg);
+$home-image-opacity: 0.8;
+
+$transition03: all 0.3s ease;
+
+// font weights and function
+$font-weights: (
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 800,
+);
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+// typography class
+.color-red {
+  color: $color-red;
+}
+.color-yellow {
+  color: $color-yellow;
+}
+.color-facebook {
+  color: #3b5999;
+}
+.color-instagram {
+  color: #e4405f;
+}

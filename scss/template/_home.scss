@@ -1,0 +1,69 @@
+.home-container {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  transition: opacity 1s ease;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $home-image no-repeat center center/cover;
+    -ms-animation: home-image 10s linear infinite;
+    animation: home-image 10s linear infinite;
+    -ms-animation-direction: alternate;
+    animation-direction: alternate;
+    z-index: -2;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, $home-image-opacity);
+    z-index: -2;
+  }
+
+  .home-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    @include flexCenter(column);
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    padding: 5px;
+    padding-right: 30px;
+    transform: translateX(-47%);
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      height: 12px;
+      width: 12px;
+      border-right: 2px solid $color-red;
+      border-bottom: 2px solid $color-red;
+      transform: rotate(45deg) translateX(-100%);
+    }
+  }
+}

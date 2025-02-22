@@ -1,0 +1,41 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $color-black;
+  color: $color-white;
+  font-size: 16px;
+}
+
+:focus {
+  outline: none;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  display: none;
+  transition: opacity 1s ease-in;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+// Transition icons, links, scroll top
+.fab,
+a {
+  transition: $transition03;
+}

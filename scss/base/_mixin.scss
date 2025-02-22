@@ -1,0 +1,49 @@
+// Flexbox
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin before {
+  content: "";
+  position: absolute;
+}
+// Mqdia Queries
+@mixin mediaPort {
+  @media (min-width: 568px) and (orientation: portrait) {
+    @content;
+  }
+}
+@mixin mediaLand {
+  @media (min-width: 568px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// small tablet styles
+@mixin mediaSm {
+  @media screen and (min-width: 620px) {
+    @content;
+  }
+}
+
+// large tablet & laptop styles
+@mixin mediaMd {
+  @media screen and (min-width: 920px) {
+    @content;
+  }
+}
+
+// desktop styles
+@mixin mediaLg {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin mediaXlg {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
